@@ -1,6 +1,7 @@
 class chrome {
 	package { chromium-browser:
 		ensure => 'latest',
+		allowcdrom => 'true',
 	}
 
 	file { '/etc/chromium-browser/default':
