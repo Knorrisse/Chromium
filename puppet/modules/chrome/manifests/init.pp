@@ -1,6 +1,6 @@
 class chrome {
 	package { chromium-browser:
-		ensure => 'latest',
+		ensure => 'installed',
 		allowcdrom => 'true',
 	}
 
@@ -11,4 +11,4 @@ class chrome {
 	file { '/etc/chromium-browser/policies/managed/test_policy.json':
                 content => template('chrome/test_policy.json.erb'),
         }
-}
+}  
